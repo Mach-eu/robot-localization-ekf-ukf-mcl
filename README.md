@@ -14,21 +14,25 @@ El foco del proyecto está en:
 - Evaluación **cuantitativa** (métricas de error)
 
 ## Objetivos
-- Implementar EKF, UKF y MCL/AMCL para estimación de pose \((x, y, \theta)\).
+- Implementar EKF, UKF y MCL/AMCL para estimación de pose $$(x, y, \theta)$$.
 - Comparar desempeño bajo distintos niveles de ruido.
 - Generar entregables reproducibles: scripts, gráficas, métricas e informe técnico.
 
 ## Modelo del sistema
 Robot móvil diferencial 2D con modelo cinemático:
 
-```text
+$$
 x_t = x_{t-1} + v · cos(θ_t) · Δt
+$$
+$$
 y_t = y_{t-1} + v · sin(θ_t) · Δt
+$$
+$$
 θ_t = θ_{t-1} + ω · Δt
-```
+$$
 
 Donde:
-- (x, y): posición
+- $$(x_t, y_t)$$: posición
 - θ: orientación
 - v: velocidad lineal
 - ω: velocidad angular
